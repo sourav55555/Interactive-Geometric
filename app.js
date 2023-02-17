@@ -64,7 +64,7 @@ document.getElementById("parallelogram-button").addEventListener("click", functi
    
     const paraArea = b1 * h1;
 
-    displayArea("Parallelogram", paraArea);
+    displayArea("Parallelo.", paraArea);
 
 })
 
@@ -90,13 +90,13 @@ document.getElementById("ellipse-button").addEventListener("click", function(){
 
 })
 
-// ellipse area with utility function(1) & (3)
-document.getElementById("ellipse-button").addEventListener("click", function(){
-    const a = textToInt("ellipse-a");
-    const b = textToInt("ellipse-b");
+// pentagon area with utility function(1) & (3)
+document.getElementById("pentagon-button").addEventListener("click", function(){
+    const p = textToInt("pentagon-p");
+    const b = textToInt("pentagon-b");
    
-    const ellipseArea = 3.14 * a * b;
+    const pentagonArea = 0.5 * p * b;
     
-    displayArea("Ellipse", ellipseArea);
+    displayArea("pentagon", pentagonArea);
 
 })

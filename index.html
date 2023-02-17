@@ -20,6 +20,7 @@
         margin: 16px auto;
         width: 100%;
         text-align: left ;
+        font-size: 15px;
     }
     li p{
         display: inline;
@@ -39,24 +40,24 @@
 
 <body>
     <header>
-        <div class="container p-12">
+        <div class="container md:p-12 p-4 mx-auto">
 
             <!-- navbar html  -->
-            <nav class="h-28 bg-sky-100 flex justify-between items-center rounded-lg p-8">
+            <nav class="h-28 bg-sky-100 flex justify-between items-center rounded-lg md:p-8 p-4">
                 <div class="logo">
-                    <h2 class="text-2xl font-bold">Interactive</h2>
-                    <p class="text-xl text-gray-500 font-semibold">Geometry Book</p>
+                    <h2 class="md:text-2xl text-xl font-bold">Interactive</h2>
+                    <p class="md:text-xl text-md text-gray-500 font-semibold">Geometry Book</p>
                 </div>
                 <a class="w-20 text-center text-white rounded-lg p-2 bg-blue-600" href="blog.html">Blog</a>
             </nav>
 
             <div class="banner mt-12">
-                <div class="grid grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 
-                    <div class="shape-cards col-span-3">
+                    <div class="shape-cards md:col-span-3">
 
                         <!--shape area cards  -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                             <!-- triangle  -->
                             <div class="shape-card p-12 text-center border-2 rounded-xl">
@@ -148,22 +149,22 @@
                                 <p class="mb-4">Area (A) = 0.5 * p * b</p>
 
                                 <div class="flex gap-3 items-center mb-10 text-center justify-center">
-                                    <p class="text-lg" >p = <span>6</span>cm ,</p>
-                                    <p class="text-lg" >b = <span>10</span>cm</p>
+                                    <p class="text-lg" >p = <span id="pentagon-p">6</span>cm ,</p>
+                                    <p class="text-lg" >b = <span id="pentagon-b">10</span>cm</p>
                                     <button><i class="fa-solid fa-pen-to-square"></i></button>
                                 </div>
 
-                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold" id="pentagon-button">Calculate</button>
                             </div>
 
                         </div>
                     </div>
 
                     <!-- area value/ calculation -->
-                    <div class="area-card border-2 text-center rounded-lg h-80 shadow-md p-6">
+                    <div class="area-card border-2 text-center rounded-lg md:h-1/2 h-auto shadow-md p-6">
                         <p class="font-semibold text-lg underline">Area Calculation</p>
                         <ol id="display-area" class="list-decimal list-inside">
-                            
+                             
                         </ol>
                         
                     </div>
