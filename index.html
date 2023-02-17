@@ -13,7 +13,31 @@
 
     <title>Interactive Geometric Book</title>
 </head>
-
+<style>
+    /* ol li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+    li{
+        margin: 16px auto;
+        width: 100%;
+    }
+    li p{
+        display: inline;
+        margin: 18px 8px;
+        color: rgb(54, 54, 54);
+    }
+    li button{
+        display: inline;
+        padding: 6px 14px;
+        background-color: rgb(132, 132, 240);
+        color: white;
+        border-radius: 10px;
+        margin-left: 14px;
+        font-size: 13px;
+    }
+</style>
 <body>
     <header>
         <div class="container p-12">
@@ -41,13 +65,13 @@
                                 <p class="mb-4">Area (A) = 0.5 * b * h</p>
 
                                 <div class="flex gap-3 items-center mb-10">
-                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="" placeholder="b">
+                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="triangle-b" placeholder="b">
                                     <p>cm</p>
-                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="" placeholder="h">
+                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="triangle-h" placeholder="h">
                                     <p>cm</p>
                                 </div>
 
-                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold" id="triangle-button">Calculate</button>
                             </div>
 
                             <div class="shape-card p-12 text-center border-2 rounded-xl">
@@ -132,6 +156,10 @@
                     <!-- area value/ calculation -->
                     <div class="area-card border-2 text-center rounded-lg h-80 shadow-md p-6">
                         <p class="font-semibold text-lg underline">Area Calculation</p>
+                        <ol id="display-area" class="list-decimal list-inside">
+                            
+                        </ol>
+                        
                     </div>
                 </div>
                 <div>
@@ -142,5 +170,6 @@
 
 
     </header>
+    <script src="app.js"></script>
 </body>
 </html>
