@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontawsome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwindcss link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Interactive Geometric Book</title>
+</head>
+
+<body>
+    <header>
+        <div class="container p-12">
+
+            <!-- navbar html  -->
+            <nav class="h-28 bg-sky-100 flex justify-between items-center rounded-lg p-8">
+                <div class="logo">
+                    <h2 class="text-2xl font-bold">Interactive</h2>
+                    <p class="text-xl text-gray-500 font-semibold">Geometry Book</p>
+                </div>
+                <a class="w-20 text-center text-white rounded-lg p-2 bg-blue-600" href="blog.html">Blog</a>
+            </nav>
+
+            <div class="banner mt-12">
+                <div class="grid grid-cols-4 gap-6">
+
+                    <div class="shape-cards col-span-3">
+
+                        <!--shape area cards  -->
+                        <div class="grid grid-cols-3 grid-rows-2 gap-6">
+                            <div class="shape-card p-12 text-center border-2 rounded-xl">
+                                <img class="h-48 mx-auto mb-8" src="images/triangle.png" alt="">
+
+                                <h3 class="mb-2 text-xl font-semibold">Triangle</h3>
+                                <p class="mb-4">Area (A) = 0.5 * b * h</p>
+
+                                <div class="flex gap-3 items-center mb-10">
+                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="" placeholder="b">
+                                    <p>cm</p>
+                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="" placeholder="h">
+                                    <p>cm</p>
+                                </div>
+
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                            </div>
+
+                            <div class="shape-card p-12 text-center border-2 rounded-xl">
+                                <img class="h-48 mx-auto mb-8" src="images/rectangle.png" alt="">
+
+                                <h3 class="mb-2 text-xl font-semibold">Rectangle</h3>
+                                <p class="mb-4">Area (A) = w * I</p>
+
+                                <div class="flex gap-3 items-center mb-10">
+                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="" placeholder="w">
+                                    <p>cm</p>
+                                    <input class="text-black w-20 px-3 py-1 bg-slate-100 rounded-md" type="text" name="" id="" placeholder="I">
+                                    <p>cm</p>
+                                </div>
+
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                            </div>
+
+                            <div class="shape-card p-12 text-center border-2 rounded-xl">
+                                <img class="h-48 mx-auto mb-8" src="images/parallelogram.png" alt="">
+
+                                <h3 class="mb-2 text-xl font-semibold">Parallelogram</h3>
+                                <p class="mb-4">Area (A) = b * h</p>
+
+                                <div class="flex gap-3 items-center mb-10 text-center justify-center">
+                                    <p class="text-lg" >b = 10cm ,</p>
+                                    <p class="text-lg" >h = 12cm</p>
+                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                </div>
+
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                            </div>
+
+                            <div class="shape-card p-12 text-center border-2 rounded-xl">
+                                <img class="h-48 mx-auto mb-8" src="images/rambas.png" alt="">
+
+                                <h3 class="mb-2 text-xl font-semibold">Rambas</h3>
+                                <p class="mb-4">Area (A) = 0.5 * d1 * d2</p>
+
+                                <div class="flex gap-3 items-center mb-10 text-center justify-center">
+                                    <p class="text-lg" >d1 = 16cm ,</p>
+                                    <p class="text-lg" >d2 = 8cm</p>
+                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                </div>
+
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                            </div>
+
+                            <div class="shape-card p-12 text-center border-2 rounded-xl">
+                                <img class="h-48 mx-auto mb-8" src="images/ellipse-512.png" alt="">
+
+                                <h3 class="mb-2 text-xl font-semibold">Ellipse</h3>
+                                <p class="mb-4">Area (A) = πab</p>
+
+                                <div class="flex gap-3 items-center mb-10 text-center justify-center">
+                                    <p class="text-lg" >b = 10cm ,</p>
+                                    <p class="text-lg" >h = 12cm</p>
+                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                </div>
+
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                            </div>
+
+                            <div class="shape-card p-12 text-center border-2 rounded-xl">
+                                <img class="h-48 mx-auto mb-8" src="images/pentagon.png" alt="">
+
+                                <h3 class="mb-2 text-xl font-semibold">Pentagon</h3>
+                                <p class="mb-4">Area (A) = .5 * p * b</p>
+
+                                <div class="flex gap-3 items-center mb-10 text-center justify-center">
+                                    <p class="text-lg" >p = 6cm ,</p>
+                                    <p class="text-lg" >b = 10cm</p>
+                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                </div>
+
+                                <button class="w-full bg-blue-500 rounded-lg py-2 text-white font-semibold">Calculate</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- area value/ calculation -->
+                    <div class="area-card border-2 text-center rounded-lg h-80 shadow-md p-6">
+                        <p class="font-semibold text-lg underline">Area Calculation</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+</body>
+</html>
