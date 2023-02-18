@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+</head>
+<body>
+    <div class="container mx-auto bg-blue-800 min-h-screen md:p-10 p-6">
+        <nav class="h-28 bg-sky-100 flex justify-between items-center rounded-lg md:p-8 p-4 mb-12">
+            <div class="logo">
+                <a href="index.html">
+                    <h2 class="md:text-2xl text-xl font-bold">Interactive</h2>
+                    <p class="md:text-xl text-md text-gray-500 font-semibold">Geometry Book</p>
+                </a>
+                
+            </div>
+        </nav>
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4 md:w-4/5 w-full mx-auto">
+
+            <!-- question ans  -->
+            <div class="bg-sky-200 p-8 rounded-xl ">
+                <p class="text-xl font-semibold mb-6"> What is DOM and what is the purpose of DOM?</p>
+                <p>
+                    Which can convert our HTML document to an object-like model called DOM.<br><br>
+
+                    With DOM object module, javascript can create dynamic HTML. DOM maintain a standard programming interface for HTML document. With DOM javascript can create, navigate and modify any element in the document. 
+                </p>
+            </div>
+            <div class="bg-sky-200 p-8 rounded-xl ">
+                <p class="text-xl font-semibold mb-6">
+                    How will you select HTML elements using DOM? Name the DOM methods.
+                </p>
+                <p>
+                    DOM selectors use JavaScript to select the HTML elements. There are 6 ways for selecting HTML elements with JavaScript.<br><br>
+
+                    1. getElementsByTagName()    -> the method returns the elements that match the passed tag name.<br>
+                    2. getElementsByClassName()   -> the method returns the elements that match the passed class name.<br>
+                    3. getElementById()   -> the method returns an element whose id matches.<br>
+                    4. querySelector()   -> the method returns the first element that matches the passed selector.<br>
+                    5.querySelectorAll()  -> the method returns all the elements that match the passed selector.<br>
+                    6. getElementsByName()  ->  the method returns the elements that match the value of the name attribute with the passed string.<br>
+                </p>
+            </div>
+            <div class="bg-sky-200 p-8 rounded-xl ">
+                <p class="text-xl font-semibold mb-6">What is event bubble?</p>
+                <p>When an element receives an event, that event bubbles up to its parent, then parent to grandparents and so on until it gets the root of the element in the DOM. It's called an event bubble.</p>
+            </div>
+            <div class="bg-sky-200 p-8 rounded-xl ">
+                <p class="text-xl font-semibold mb-6">What is a callback function and why will you use it?</p>
+                <p>
+                    We can pass parameters in a function, and if the passed parameter is another function so that the function can be executed is called a callback function. <br> <br>
+                    JavaScript runs codes from top to down order. If a function is defined before a function but I need to execute the function right after something has happened or some task is completed then I can use the callback function.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
