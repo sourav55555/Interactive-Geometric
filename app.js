@@ -10,12 +10,16 @@ function displayArea(name,areaValue){
     const p2 = document.createElement("p");
     p2.innerText = name;
 
-    const button = document.createElement("button");
-    button.innerHTML = "Convert to m<sup>2</sup>";
+    const button1 = document.createElement("button");
+    button1.innerHTML = "Convert to m<sup>2</sup>";
+
+    const button2 = document.createElement("img");
+    button2.setAttribute("src", "images/cross.png");
 
     li.appendChild(p2);
     li.appendChild(p1);
-    li.appendChild(button);
+    li.appendChild(button1);
+    li.appendChild(button2)
 
     ol.appendChild(li);
 
@@ -90,7 +94,7 @@ parallelogramButton.addEventListener("click", function(){
    
     const paraArea = b1 * h1;
 
-    displayArea("Parallelo.", paraArea);
+    displayArea("Parallelogram", paraArea);
 
 })
 
@@ -153,3 +157,72 @@ pentagonButton.addEventListener("click", function(){
 
 })
 
+// utility function for set value in html
+function setVal(idName , value){
+    document.getElementById(idName).innerText = value;
+}
+
+//functions for edit fixed html values 
+
+document.getElementById("parallelogramEdit").addEventListener("click", function(){
+    document.getElementById("parallelogram-values").style.display= "flex";
+})
+
+document.getElementById("setParallelogram").addEventListener("click", function(){
+
+    const newValue1 = inputToInt("parallelogram-Nb");
+    const newValue2 = inputToInt("parallelogram-Nh");
+
+    setVal("parallelogram-b", newValue1);
+    setVal("parallelogram-h", newValue2);
+
+    document.getElementById("parallelogram-values").style.display= "none";
+})
+
+// rhombus
+document.getElementById("rhombusEdit").addEventListener("click", function(){
+    document.getElementById("rhombus-values").style.display= "flex";
+})
+
+document.getElementById("setRhombus").addEventListener("click", function(){
+
+    const newValue1 = inputToInt("rhombus-Nd1");
+    const newValue2 = inputToInt("rhombus-Nd2");
+
+    setVal("rhombus-d1", newValue1);
+    setVal("rhombus-d2", newValue2);
+
+    document.getElementById("rhombus-values").style.display= "none";
+})
+
+//ellipse
+document.getElementById("ellipseEdit").addEventListener("click", function(){
+    document.getElementById("ellipse-values").style.display= "flex";
+})
+
+document.getElementById("setEllipse").addEventListener("click", function(){
+
+    const newValue1 = inputToInt("ellipse-Na");
+    const newValue2 = inputToInt("ellipse-Nb");
+
+    setVal("ellipse-a", newValue1);
+    setVal("ellipse-b", newValue2);
+
+    document.getElementById("ellipse-values").style.display= "none";
+})
+
+//pentagon 
+document.getElementById("pentagonEdit").addEventListener("click", function(){
+    document.getElementById("pentagon-values").style.display= "flex";
+})
+
+document.getElementById("setPentagon").addEventListener("click", function(){
+
+    const newValue1 = inputToInt("pentagon-Np");
+    const newValue2 = inputToInt("pentagon-Nb");
+
+    setVal("pentagon-p", newValue1);
+    setVal("pentagon-b", newValue2);
+
+    document.getElementById("pentagon-values").style.display= "none";
+})
