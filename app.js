@@ -1,5 +1,10 @@
 // utility function(1) for create area value element
 function displayArea(name,areaValue){
+
+    if( isNaN(areaValue)){
+        return;
+    }
+
     const ol = document.getElementById("display-area");
 
     const li = document.createElement("li");
@@ -34,7 +39,13 @@ function displayArea(name,areaValue){
 function inputToInt(idName){
     const id = document.getElementById(idName);
     const value = parseFloat(id.value).toFixed(2);
-    return value;
+    if( value < 0){
+        alert("Input Must be positive number");
+    }
+    else{
+        return value;
+    }
+    
 }
 
 // utility function(3) for get numeric value from inner-text
@@ -174,7 +185,7 @@ function setVal(idName , value){
 }
 
 //functions for edit fixed html values 
-
+// parallelogram
 document.getElementById("parallelogramEdit").addEventListener("click", function(){
     document.getElementById("parallelogram-values").style.display= "flex";
 })
@@ -184,6 +195,9 @@ document.getElementById("setParallelogram").addEventListener("click", function()
     const newValue1 = inputToInt("parallelogram-Nb");
     const newValue2 = inputToInt("parallelogram-Nh");
 
+    if( newValue2 == null || newValue1 == null){
+        return;
+    }
     setVal("parallelogram-b", newValue1);
     setVal("parallelogram-h", newValue2);
 
@@ -199,6 +213,9 @@ document.getElementById("setRhombus").addEventListener("click", function(){
 
     const newValue1 = inputToInt("rhombus-Nd1");
     const newValue2 = inputToInt("rhombus-Nd2");
+    if( newValue2 == null || newValue1 == null){
+        return;
+    }
 
     setVal("rhombus-d1", newValue1);
     setVal("rhombus-d2", newValue2);
@@ -215,6 +232,9 @@ document.getElementById("setEllipse").addEventListener("click", function(){
 
     const newValue1 = inputToInt("ellipse-Na");
     const newValue2 = inputToInt("ellipse-Nb");
+    if( newValue2 == null || newValue1 == null){
+        return;
+    }
 
     setVal("ellipse-a", newValue1);
     setVal("ellipse-b", newValue2);
@@ -231,6 +251,9 @@ document.getElementById("setPentagon").addEventListener("click", function(){
 
     const newValue1 = inputToInt("pentagon-Np");
     const newValue2 = inputToInt("pentagon-Nb");
+    if( newValue2 == null || newValue1 == null){
+        return;
+    }
 
     setVal("pentagon-p", newValue1);
     setVal("pentagon-b", newValue2);
