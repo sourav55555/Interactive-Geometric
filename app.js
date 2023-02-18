@@ -6,24 +6,28 @@ function displayArea(name,areaValue){
 
     const p1 = document.createElement("p");
     p1.innerHTML = `${areaValue}cm<sup>2</sup>`;
+    p1.setAttribute("id", `${name}p`)
 
     const p2 = document.createElement("p");
     p2.innerText = name;
 
     const button1 = document.createElement("button");
     button1.innerHTML = "Convert to m<sup>2</sup>";
+    button1.setAttribute("id", `${name}Button`);
 
-    const button2 = document.createElement("img");
-    button2.setAttribute("src", "images/cross.png");
+    const img = document.createElement("img");
+    img.setAttribute("src", "images/cross.png");
+    img.setAttribute("class", "cross");
 
     li.appendChild(p2);
     li.appendChild(p1);
     li.appendChild(button1);
-    li.appendChild(button2)
+    li.appendChild(img);
 
     ol.appendChild(li);
 
 }
+
 
 
 // utility function(2) for get numeric value from inputs
@@ -59,6 +63,7 @@ triangleButton.addEventListener("click", function(){
     const triArea = .5*b*h;
 
     displayArea("Triangle",triArea);
+    call("Triangle");
 })
 
 // Rectangle area with utility function(1) & (2)
@@ -77,6 +82,7 @@ rectangleButton.addEventListener("click", function(){
     const rectArea = w*l;
 
     displayArea("Rectangle",rectArea);
+    call("Rectangle");
 })
 
 // parallelogram area with utility function(1) & (3)
@@ -95,6 +101,7 @@ parallelogramButton.addEventListener("click", function(){
     const paraArea = b1 * h1;
 
     displayArea("Parallelogram", paraArea);
+    call("Parallelogram");
 
 })
 
@@ -114,6 +121,7 @@ rhombusButton.addEventListener("click", function(){
     const rhomArea = 0.5 * d1 * d2;
     
     displayArea("Rhombus", rhomArea);
+    call("Rhombus");
 
 })
 
@@ -133,6 +141,7 @@ ellipseButton.addEventListener("click", function(){
     const ellipseArea = 3.14 * a * b;
     
     displayArea("Ellipse", ellipseArea);
+    call("Ellipse");
 
 })
 
@@ -153,9 +162,11 @@ pentagonButton.addEventListener("click", function(){
    
     const pentagonArea = 0.5 * p * b;
     
-    displayArea("pentagon", pentagonArea);
+    displayArea("Pentagon", pentagonArea);
+    call("Pentagon");
 
 })
+
 
 // utility function for set value in html
 function setVal(idName , value){
@@ -226,3 +237,14 @@ document.getElementById("setPentagon").addEventListener("click", function(){
 
     document.getElementById("pentagon-values").style.display= "none";
 })
+
+
+// utility function for cm2 to m2
+function call(callName){
+    const change = document.getElementById(`${callName}Button`);
+    change.addEventListener("click", function(){
+        const p = document.getElementById(`${callName}p`);
+        const pVal = parseFloat(p.innerText);
+        p.innerHTML = `${pVal/10000}m<sup>2</sup>`;
+    });
+}
