@@ -36,9 +36,19 @@ function textToInt(idName){
     return value;
 }
 
+// random color on hover
+const colors = ["#DC143C","#FF8C00","#FFFF00","#3CB371","#20B2AA","#0000FF","#6A5ACD","#FF00FF","#2F4F4F"];
 
 // triangle area with utility function(1) & (2)
-document.getElementById("triangle-button").addEventListener("click", function(){
+const triangleButton = document.getElementById("triangle-button");
+
+const triangleParent = triangleButton.parentElement;
+triangleParent.addEventListener("mouseenter", function(){
+    const random = Math.floor(Math.random()*10);
+    triangleParent.style.background = colors[random];
+})
+
+triangleButton.addEventListener("click", function(){
     const b = inputToInt("triangle-b");
     const h = inputToInt("triangle-h");
 
@@ -48,7 +58,15 @@ document.getElementById("triangle-button").addEventListener("click", function(){
 })
 
 // Rectangle area with utility function(1) & (2)
-document.getElementById("rectangle-button").addEventListener("click", function(){
+const rectangleButton = document.getElementById("rectangle-button")
+
+const rectangleParent = rectangleButton.parentElement;
+rectangleParent.addEventListener("mouseenter", function(){
+    const random = Math.floor(Math.random()*10);
+    rectangleParent.style.background = colors[random];
+})
+
+rectangleButton.addEventListener("click", function(){
     const w = inputToInt("rectangle-w");
     const l = inputToInt("rectangle-l");
 
@@ -58,7 +76,15 @@ document.getElementById("rectangle-button").addEventListener("click", function()
 })
 
 // parallelogram area with utility function(1) & (3)
-document.getElementById("parallelogram-button").addEventListener("click", function(){
+const parallelogramButton = document.getElementById("parallelogram-button")
+
+const parallelogramParent = parallelogramButton.parentElement;
+parallelogramParent.addEventListener("mouseenter", function(){
+    const random = Math.floor(Math.random()*10);
+    parallelogramParent.style.background = colors[random];
+})
+
+parallelogramButton.addEventListener("click", function(){
     const b1 = textToInt("parallelogram-b");
     const h1 = textToInt("parallelogram-h");
    
@@ -69,7 +95,15 @@ document.getElementById("parallelogram-button").addEventListener("click", functi
 })
 
 // rhombus area with utility function(1) & (3)
-document.getElementById("rhombus-button").addEventListener("click", function(){
+const rhombusButton = document.getElementById("rhombus-button");
+
+const rhombusParent = rhombusButton.parentElement;
+rhombusParent.addEventListener("mouseenter", function(){
+    const random = Math.floor(Math.random()*10);
+    rhombusParent.style.background = colors[random];
+})
+
+rhombusButton.addEventListener("click", function(){
     const d1 = textToInt("rhombus-d1");
     const d2 = textToInt("rhombus-d2");
    
@@ -80,7 +114,15 @@ document.getElementById("rhombus-button").addEventListener("click", function(){
 })
 
 // ellipse area with utility function(1) & (3)
-document.getElementById("ellipse-button").addEventListener("click", function(){
+const ellipseButton = document.getElementById("ellipse-button");
+
+const ellipseParent = ellipseButton.parentElement;
+ellipseParent.addEventListener("mouseenter", function(){
+    const random = Math.floor(Math.random()*10);
+    ellipseParent.style.background = colors[random];
+})
+
+ellipseButton.addEventListener("click", function(){
     const a = textToInt("ellipse-a");
     const b = textToInt("ellipse-b");
    
@@ -90,8 +132,18 @@ document.getElementById("ellipse-button").addEventListener("click", function(){
 
 })
 
+
+
 // pentagon area with utility function(1) & (3)
-document.getElementById("pentagon-button").addEventListener("click", function(){
+const pentagonButton = document.getElementById("pentagon-button");
+
+const pentagonParent = pentagonButton.parentElement;
+pentagonParent.addEventListener("mouseenter", function(){
+    const random = Math.floor(Math.random()*10);
+    pentagonParent.style.background = colors[random];
+})
+
+pentagonButton.addEventListener("click", function(){
     const p = textToInt("pentagon-p");
     const b = textToInt("pentagon-b");
    
@@ -100,3 +152,4 @@ document.getElementById("pentagon-button").addEventListener("click", function(){
     displayArea("pentagon", pentagonArea);
 
 })
+
