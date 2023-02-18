@@ -48,6 +48,7 @@ function inputToInt(idName){
     
 }
 
+
 // utility function(3) for get numeric value from inner-text
 function textToInt(idName){
     const id = document.getElementById(idName);
@@ -55,8 +56,8 @@ function textToInt(idName){
     return value;
 }
 
-// random color on hover
-const colors = ["#DC143C","#FF8C00","#FFFF00","#3CB371","#20B2AA","#0000FF","#6A5ACD","#FF00FF","#2F4F4F"];
+// random colors for hover
+const colors = ["#FFA07A","#FFB6C1","#FAFAD2","#D8BFD8","#ADFF2F","#E0FFFF","#FFE4E1","#C0C0C0","#2F4F4F"];
 
 // triangle area with utility function(1) & (2)
 const triangleButton = document.getElementById("triangle-button");
@@ -77,6 +78,7 @@ triangleButton.addEventListener("click", function(){
     call("Triangle");
 })
 
+
 // Rectangle area with utility function(1) & (2)
 const rectangleButton = document.getElementById("rectangle-button")
 
@@ -95,6 +97,7 @@ rectangleButton.addEventListener("click", function(){
     displayArea("Rectangle",rectArea);
     call("Rectangle");
 })
+
 
 // parallelogram area with utility function(1) & (3)
 const parallelogramButton = document.getElementById("parallelogram-button")
@@ -116,6 +119,7 @@ parallelogramButton.addEventListener("click", function(){
 
 })
 
+
 // rhombus area with utility function(1) & (3)
 const rhombusButton = document.getElementById("rhombus-button");
 
@@ -135,6 +139,7 @@ rhombusButton.addEventListener("click", function(){
     call("Rhombus");
 
 })
+
 
 // ellipse area with utility function(1) & (3)
 const ellipseButton = document.getElementById("ellipse-button");
